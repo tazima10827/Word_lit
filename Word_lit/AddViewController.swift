@@ -42,6 +42,7 @@ class AddViewController: UIViewController {
             style: .default,
             handler: nil
         ))
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

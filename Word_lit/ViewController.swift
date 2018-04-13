@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -18,11 +17,13 @@ class ViewController: UIViewController {
     
 
     @IBAction func startButtonTapped(_ sender: Any) {
-//        if let wordArray = saveData.array(forkey:"WORD"){
-//            if wordArray.count > 0{
-//                self.performSegue(withIdentifier: "toQuestionView", sender: nil)
-//            }
-//        }
+        let saveData = UserDefaults.standard
+        
+        if let wordArray = saveData.array(forKey:"WORD"){
+            if wordArray.count > 0{
+                self.performSegue(withIdentifier: "toQuestionView", sender: nil)
+            }
+        }
         let alert: UIAlertController = UIAlertController (
             title: "単語",
             message: "まずは「単語一覧」をタップして単語を登録してください。",

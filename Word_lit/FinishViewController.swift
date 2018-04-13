@@ -21,7 +21,10 @@ class FinishViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func Topback(_ sender: Any) {
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
